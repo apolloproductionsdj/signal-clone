@@ -3,14 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import LoginScreen from './screens/LoginScreen';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Text>Let's build signal!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <Stack.Navigator>
+        <Stack.Screen name='Login' component={LoginScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
