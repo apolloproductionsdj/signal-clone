@@ -12,7 +12,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Login' component={LoginScreen} />
+        <Stack.Screen
+          options={{
+            title: "Let's Sign Up",
+          }}
+          name='Login'
+          component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
