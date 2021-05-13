@@ -8,14 +8,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
+const globalScreenOptions = {
+  headerStyle: { backgroundColor: "#2C68ED" },
+  headerTitleStyle: { color: 'white' },
+  headerTintColor: "white",
+};
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
         <Stack.Screen
-          options={{
-            title: "Let's Sign Up",
-          }}
           name='Login'
           component={LoginScreen} />
       </Stack.Navigator>
