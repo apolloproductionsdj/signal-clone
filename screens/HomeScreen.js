@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
                 {chats.map(({ id, data: { chatName } }) => (
                     <CustomListItem
                         key={id}
-                        kid={id}
+                        id={id}
                         chatName={chatName}
                         enterChat={enterChat}
                     />
